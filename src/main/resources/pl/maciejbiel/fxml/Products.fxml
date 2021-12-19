@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.Products">
+    <children>
+        <Pane prefHeight="150.0" prefWidth="1205.0" style="-fx-background-color: #0997d9;">
+            <children>
+                <Button fx:id="Products_button_back" layoutX="51.0" layoutY="47.0" mnemonicParsing="false"
+                        onAction="#handleButtonClicks" styleClass="Entity_button_back" text="&lt;"
+                        style="-fx-background-color: #0884bc;"/>
+                <Label layoutX="146.0" layoutY="50.0"
+                       style="-fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="Produkty"/>
+            </children>
+        </Pane>
+        <TextField fx:id="Products_input_search" layoutX="37.0" layoutY="181.0" prefHeight="40.0" prefWidth="260.0"
+                   promptText="Wyszukiwanie produktów" styleClass="Root_inputText"/>
+        <Button fx:id="Products_button_search" layoutX="297.0" layoutY="181.0" mnemonicParsing="false"
+                onAction="#handleButtonClicks" prefHeight="40.0" prefWidth="84.0" styleClass="Root_button"
+                text="Szukaj"/>
+        <Button fx:id="Products_button_addNew" layoutX="1017.0" layoutY="181.0" mnemonicParsing="false"
+                onAction="#handleButtonClicks" prefHeight="40.0" prefWidth="150.0" styleClass="Entity_button_addNew"
+                text="Dodaj"/>
+        <Button fx:id="Products_button_clear" layoutX="817.0" layoutY="181.0" mnemonicParsing="false"
+                onAction="#handleButtonClicks" prefHeight="40.0" prefWidth="185.0"
+                styleClass="Entity_button_clearSearch" text="Wyczyść Wyszukiwanie"/>
+<!--        <ChoiceBox fx:id="Products_select_search" layoutX="410.0" layoutY="182.0" styleClass="Entity_select"-->
+<!--                   value="nazwa">-->
+<!--            <items>-->
+<!--                <FXCollections fx:factory="observableArrayList">-->
+<!--                    <String fx:value="nazwa"/>-->
+<!--                    <String fx:value="kod producenta"/>-->
+<!--                    <String fx:value="opis"/>-->
+<!--                    <String fx:value="kategoria"/>-->
+<!--                </FXCollections>-->
+<!--            </items>-->
+<!--        </ChoiceBox>-->
+        <StackPane layoutX="38.0" layoutY="250.0" prefHeight="448.0" prefWidth="1129.0">
+            <children>
+                <Pagination fx:id="Products_pagination" layoutX="503.0" layoutY="712.0">
+                    <fx:define>
+                        <TableView fx:id="Products_table" prefHeight="217.0" prefWidth="1129.0">
+                            <columns>
+                                <TableColumn fx:id="Products_table_col_id" prefWidth="62.0" text="Id"/>
+                                <TableColumn fx:id="Products_table_col_name" prefWidth="284.0" text="Nazwa"/>
+                                <TableColumn fx:id="Products_table_col_code" prefWidth="160.0" text="Kod Producenta"/>
+                                <TableColumn fx:id="Products_table_col_price" prefWidth="67.0" text="Cena"/>
+                                <TableColumn fx:id="Products_table_col_desc" prefWidth="168.0" text="Opis"/>
+                                <TableColumn fx:id="Products_table_col_category" prefWidth="84.0" text="Kategoria"/>
+                                <TableColumn fx:id="Products_table_colEdit" prefWidth="160.0"
+                                             style="-fx-alignment: CENTER;" text="Edytuj"/>
+                                <TableColumn fx:id="Products_table_colDelete" prefWidth="143.0"
+                                             style="-fx-alignment: CENTER;" text="Usuń"/>
+                            </columns>
+                        </TableView>
+                    </fx:define>
+                </Pagination>
+            </children>
+        </StackPane>
+        <Label fx:id="Products_label_searchResults" layoutX="38.0" layoutY="724.0" text="Wyniki wyszukiwania: -"/>
+        <Label fx:id="Products_label_pageNumber" layoutX="1120.0" layoutY="724.0" text="Strona: -"/>
+    </children>
+</AnchorPane>

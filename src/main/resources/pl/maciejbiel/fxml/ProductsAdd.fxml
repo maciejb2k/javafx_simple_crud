@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.ProductsAdd">
+   <center>
+      <AnchorPane prefHeight="714.0" prefWidth="645.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="652.0" style="-fx-background-color: #07aef2;">
+               <children>
+                  <Label fx:id="ProductsAdd_label_title" alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="28.0" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+               </children>
+            </Pane>
+            <TextField fx:id="ProductsAdd_input_name" layoutX="66.0" layoutY="173.0" prefHeight="30.0" prefWidth="250.0" promptText="Dell S3222DGM" />
+            <Label layoutX="66.0" layoutY="151.0" text="Nazwa">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="ProductsAdd_input_code" layoutX="66.0" layoutY="245.0" prefHeight="30.0" prefWidth="250.0" promptText="210-AZZH Consumer" />
+            <Label layoutX="66.0" layoutY="223.0" text="Kod Producenta">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="ProductsAdd_input_price" layoutX="335.0" layoutY="173.0" prefHeight="30.0" prefWidth="250.0" promptText="1679.99" />
+            <Label layoutX="335.0" layoutY="151.0" text="Cena">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="ProductsAdd_input_category" layoutX="335.0" layoutY="245.0" prefHeight="30.0" prefWidth="250.0" promptText="Monitory" />
+            <Label layoutX="335.0" layoutY="223.0" text="Kategoria">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <Button fx:id="ProductsAdd_button_add" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="45.0" prefWidth="520.0" styleClass="EntityAdd_button_add" text="Dodaj" />
+            <HBox alignment="CENTER" layoutY="629.0" prefHeight="82.0" prefWidth="652.0">
+               <children>
+                  <Text fx:id="ProductsAdd_text_form" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <Label layoutX="67.0" layoutY="295.0" text="Opis">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="ProductsAdd_input_desc" layoutX="66.0" layoutY="317.0" prefHeight="221.0" prefWidth="520.0" promptText="Zdominuj pole walki z monitorem dla graczy Dell S3222DGM." />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

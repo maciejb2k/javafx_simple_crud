@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<?import javafx.scene.control.Pagination?>
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.Orders">
+    <children>
+        <Pane prefHeight="150.0" prefWidth="1205.0" style="-fx-background-color: #0673a5;">
+            <children>
+                <Button fx:id="Orders_button_back" layoutX="51.0" layoutY="47.0" mnemonicParsing="false"
+                        onAction="#handleButtonClicks" style="-fx-background-color: #045d83;"
+                        styleClass="Entity_button_back" text="&lt;"/>
+                <Label layoutX="146.0" layoutY="50.0"
+                       style="-fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="Zamówienia"/>
+            </children>
+        </Pane>
+        <TextField fx:id="Orders_input_search" layoutX="37.0" layoutY="181.0" prefHeight="40.0" prefWidth="260.0"
+                   promptText="Wyszukiwanie uzytkownikow" styleClass="Root_inputText"/>
+        <Button fx:id="Orders_button_search" layoutX="297.0" layoutY="181.0" mnemonicParsing="false"
+                onAction="#handleButtonClicks" prefHeight="40.0" prefWidth="84.0" styleClass="Root_button"
+                text="Szukaj"/>
+        <Button fx:id="Orders_button_addNew" layoutX="1017.0" layoutY="181.0" mnemonicParsing="false"
+                onAction="#handleButtonClicks" prefHeight="40.0" prefWidth="150.0" styleClass="Entity_button_addNew"
+                text="Dodaj"/>
+        <Button fx:id="Orders_button_clear" layoutX="817.0" layoutY="181.0" mnemonicParsing="false"
+                onAction="#handleButtonClicks" prefHeight="40.0" prefWidth="185.0"
+                styleClass="Entity_button_clearSearch" text="Wyczyść Wyszukiwanie"/>
+<!--        <ChoiceBox fx:id="Orders_select_search" layoutX="410.0" layoutY="182.0" styleClass="Entity_select"-->
+<!--                   value="Płatność">-->
+<!--            <items>-->
+<!--                <FXCollections fx:factory="observableArrayList">-->
+<!--                    <String fx:value="Płatność"/>-->
+<!--                    <String fx:value="E-Mail"/>-->
+<!--                </FXCollections>-->
+<!--            </items>-->
+<!--        </ChoiceBox>-->
+        <StackPane layoutX="38.0" layoutY="250.0" prefHeight="448.0" prefWidth="1129.0">
+            <children>
+                <Pagination fx:id="Orders_pagination" layoutX="503.0" layoutY="712.0">
+                    <fx:define>
+                        <TableView fx:id="Orders_table" prefHeight="217.0" prefWidth="1129.0">
+                            <columns>
+                                <TableColumn fx:id="Orders_table_col_id" prefWidth="53.0" text="Id"
+                                             style="-fx-alignment: CENTER;"/>
+                                <TableColumn fx:id="Orders_table_col_email" prefWidth="265.0" text="E-Mail Uzytkownika"
+                                             style="-fx-alignment: CENTER;"/>
+                                <TableColumn fx:id="Orders_table_col_payment" prefWidth="184.0" text="Płatność"
+                                             style="-fx-alignment: CENTER;"/>
+                                <TableColumn fx:id="Orders_table_col_price" minWidth="0.0" prefWidth="117.0"
+                                             text="Kwota" style="-fx-alignment: CENTER;"/>
+                                <TableColumn fx:id="Orders_table_col_status" prefWidth="169.0" text="Status" style="-fx-alignment: CENTER;"/>
+                                <TableColumn fx:id="Orders_table_col_isFinished" prefWidth="132.0" text="Zrealizowano"
+                                             style="-fx-alignment: CENTER;"/>
+                                <TableColumn fx:id="Orders_table_colDetails" minWidth="0.0" prefWidth="100.0"
+                                             style="-fx-alignment: CENTER;" text="Szczegóły"/>
+                                <TableColumn fx:id="Orders_table_colDelete" minWidth="6.0" prefWidth="108.0"
+                                             style="-fx-alignment: CENTER;" text="Usuń"/>
+                            </columns>
+                        </TableView>
+                    </fx:define>
+                </Pagination>
+            </children>
+        </StackPane>
+        <Label fx:id="Orders_label_searchResults" layoutX="38.0" layoutY="724.0" text="Wyniki wyszukiwania: -"/>
+        <Label fx:id="Orders_label_pageNumber" layoutX="1120.0" layoutY="724.0" text="Strona: -"/>
+    </children>
+</AnchorPane>

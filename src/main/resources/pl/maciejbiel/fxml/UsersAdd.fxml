@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.UsersAdd">
+   <center>
+      <AnchorPane prefHeight="714.0" prefWidth="645.0">
+         <children>
+            <Pane prefHeight="100.0" prefWidth="652.0" style="-fx-background-color: #07aef2;">
+               <children>
+                  <Label fx:id="UsersAdd_label_title" alignment="CENTER" contentDisplay="CENTER" layoutX="189.0" layoutY="28.0" style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" />
+               </children>
+            </Pane>
+            <TextField fx:id="UsersAdd_input_fname" layoutX="67.0" layoutY="166.0" prefHeight="30.0" prefWidth="250.0" promptText="Maciej" />
+            <Label layoutX="67.0" layoutY="144.0" text="Imię">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_lname" layoutX="67.0" layoutY="238.0" prefHeight="30.0" prefWidth="250.0" promptText="Biel" />
+            <Label layoutX="67.0" layoutY="216.0" text="Nazwisko">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_username" layoutX="67.0" layoutY="310.0" prefHeight="30.0" prefWidth="250.0" promptText="Programista00e23490234" />
+            <Label layoutX="67.0" layoutY="288.0" text="Nazwa Użytkownika">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_email" layoutX="67.0" layoutY="382.0" prefHeight="30.0" prefWidth="250.0" promptText="mb117780@stud.ur.edu.pl" />
+            <Label layoutX="67.0" layoutY="360.0" text="E-Mail">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_phone" layoutX="67.0" layoutY="454.0" prefHeight="30.0" prefWidth="250.0" promptText="48123456789" />
+            <Label layoutX="67.0" layoutY="432.0" text="Numer Telefonu">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_password" layoutX="67.0" layoutY="526.0" prefHeight="30.0" prefWidth="250.0" promptText="Minimum 8 znakow" />
+            <Label layoutX="67.0" layoutY="504.0" text="Hasło">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_street" layoutX="337.0" layoutY="166.0" prefHeight="30.0" prefWidth="250.0" promptText="Pigonia" />
+            <Label layoutX="337.0" layoutY="144.0" text="Ulica">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_flatnum" layoutX="337.0" layoutY="238.0" prefHeight="30.0" prefWidth="250.0" promptText="4" />
+            <Label layoutX="337.0" layoutY="216.0" text="Numer Mieszkania">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_city" layoutX="337.0" layoutY="310.0" prefHeight="30.0" prefWidth="250.0" promptText="Rzeszów" />
+            <Label layoutX="337.0" layoutY="288.0" text="Miasto">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_zipcode" layoutX="337.0" layoutY="382.0" prefHeight="30.0" prefWidth="250.0" promptText="35-000" />
+            <Label layoutX="337.0" layoutY="360.0" text="Kod Pocztowy">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="UsersAdd_input_country" layoutX="337.0" layoutY="454.0" prefHeight="30.0" prefWidth="250.0" promptText="Polska" />
+            <Label layoutX="337.0" layoutY="432.0" text="Kraj">
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <Button fx:id="UsersAdd_button_add" layoutX="66.0" layoutY="585.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="45.0" prefWidth="520.0" styleClass="EntityAdd_button_add" text="Dodaj" />
+            <HBox alignment="CENTER" layoutY="629.0" prefHeight="82.0" prefWidth="652.0">
+               <children>
+                  <Text fx:id="UsersAdd_text_form" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

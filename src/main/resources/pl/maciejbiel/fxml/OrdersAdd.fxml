@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.OrdersAdd">
+    <children>
+        <Pane prefHeight="104.0" prefWidth="1400.0" style="-fx-background-color: #0673a5;">
+            <children>
+                <Text fill="WHITE" layoutX="574.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dodaj Zamówienie">
+                    <font>
+                        <Font name="System Bold" size="30.0" />
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <TableView fx:id="OrdersAdd_table_products" layoutX="46.0" layoutY="202.0" prefHeight="498.0" prefWidth="443.0">
+            <columns>
+                <TableColumn fx:id="OrdersAdd_col_name" prefWidth="237.0" text="Nazwa" />
+                <TableColumn fx:id="OrdersAdd_col_code" prefWidth="96.0" text="Kod" />
+                <TableColumn fx:id="OrdersAdd_col_price" prefWidth="100.0" style="-fx-alignment: CENTER;" text="Cena" />
+            </columns>
+        </TableView>
+        <TextField fx:id="OrdersAdd_input_search" layoutX="46.0" layoutY="162.0" prefHeight="25.0" prefWidth="213.0" promptText="np. Nazwa, Kod itp." />
+        <Label layoutX="46.0" layoutY="140.0" text="Wyszukaj Produkt">
+            <padding>
+                <Insets bottom="5.0" />
+            </padding>
+        </Label>
+        <Button fx:id="OrdersAdd_button_search" layoutX="259.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="25.0" prefWidth="62.0" text="Szukaj" />
+        <ListView fx:id="OrdersAdd_cart" layoutX="540.0" layoutY="202.0" prefHeight="450.0" prefWidth="309.0" />
+        <Label layoutX="540.0" layoutY="162.0" text="Wybrane Produkty">
+            <padding>
+                <Insets bottom="5.0" />
+            </padding>
+        </Label>
+        <ChoiceBox fx:id="OrdersAdd_select_payment" layoutX="900.0" layoutY="601.0" prefHeight="25.0" prefWidth="443.0" value="Przelew">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Przelew" />
+                    <String fx:value="Visa" />
+                    <String fx:value="Mastercard" />
+                    <String fx:value="Blik" />
+                    <String fx:value="PayU" />
+                    <String fx:value="Przelewy24" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <Label layoutX="900.0" layoutY="579.0" text="Forma Płatności">
+            <padding>
+                <Insets bottom="5.0" />
+            </padding>
+        </Label>
+        <Button fx:id="OrdersAdd_button_submit" layoutX="901.0" layoutY="649.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="40.0" prefWidth="443.0" text="Złóż Zamówienie" />
+        <Label layoutX="899.0" layoutY="138.0" text="Użytkownik">
+            <padding>
+                <Insets bottom="5.0" />
+            </padding>
+        </Label>
+        <Label fx:id="OrdersAdd_label_selectedUser" layoutX="899.0" layoutY="534.0" text="Wybrano: ">
+            <padding>
+                <Insets bottom="5.0" top="5.0" />
+            </padding>
+        </Label>
+        <Button fx:id="OrdersAdd_button_cartDelete" layoutX="727.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleButtonClicks" text="Usuń Zaznaczone" textAlignment="RIGHT" />
+        <HBox alignment="BOTTOM_RIGHT" layoutX="650.0" layoutY="654.0" prefHeight="100.0" prefWidth="200.0" />
+        <Button fx:id="OrdersAdd_button_addProduct" layoutX="390.0" layoutY="719.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="25.0" prefWidth="99.0" text="Dodaj" />
+        <TextField fx:id="OrdersAdd_input_quantity" layoutX="302.0" layoutY="719.0" prefHeight="25.0" prefWidth="75.0" promptText="Ilość" />
+        <VBox layoutX="540.0" layoutY="654.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="294.0">
+            <children>
+                <Label fx:id="OrdersAdd_text_price" style="-fx-font-weight: bold; -fx-font-size: 36px;" text="0,00 zł" textAlignment="RIGHT">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                    <padding>
+                        <Insets top="15.0" />
+                    </padding>
+                </Label>
+                <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" text="Łącznie do zapłaty" textAlignment="RIGHT">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <Button fx:id="OrdersAdd_button_clear" layoutX="407.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonClicks" styleClass="Root_button" text="Wyczysc" textAlignment="RIGHT" />
+        <TextField fx:id="OrdersAdd_input_searchUser" layoutX="899.0" layoutY="162.0" prefHeight="25.0" prefWidth="213.0" promptText="np. E-Mail, Nazwa itp." />
+        <Button fx:id="OrdersAdd_button_searchUser" layoutX="1112.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="25.0" prefWidth="62.0" text="Szukaj" />
+        <Button fx:id="OrdersAdd_button_clearUser" layoutX="1260.0" layoutY="162.0" mnemonicParsing="false" onAction="#handleButtonClicks" styleClass="Root_button" text="Wyczysc" textAlignment="RIGHT" />
+        <TableView fx:id="OrdersAdd_table_users" layoutX="899.0" layoutY="202.0" prefHeight="327.0" prefWidth="443.0">
+            <columns>
+                <TableColumn fx:id="OrdersAdd_col_email" prefWidth="279.0" text="E-Mail" />
+                <TableColumn fx:id="OrdersAdd_col_username" prefWidth="163.0" text="Nazwa Użytkownika" />
+            </columns>
+        </TableView>
+      <HBox alignment="CENTER" layoutX="966.0" layoutY="699.0" prefHeight="40.0" prefWidth="309.0">
+         <children>
+            <Text fx:id="OrdersAdd_text_message" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+         </children>
+      </HBox>
+    </children>
+</AnchorPane>

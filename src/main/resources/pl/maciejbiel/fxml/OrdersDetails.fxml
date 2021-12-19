@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.OrdersDetails">
+   <children>
+      <Pane prefHeight="150.0" prefWidth="1205.0" style="-fx-background-color: #0673a5;">
+         <children>
+            <Label layoutX="74.0" layoutY="46.0" style="-fx-font-size: 40px; -fx-font-weight: bold; -fx-text-fill: #ffffff;" text="Szczegóły Zamówienia" />
+         </children>
+      </Pane>
+      <VBox layoutX="77.0" layoutY="402.0" prefHeight="58.0" prefWidth="300.0">
+         <children>
+            <Label prefHeight="0.0" prefWidth="334.0" text="Adres:" />
+            <Text fx:id="OrdersDetails_info_street" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="OrdersDetails_info_zipcodeCity" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="OrdersDetails_info_country" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <Label layoutX="77.0" layoutY="214.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Użytkownik">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <VBox layoutX="77.0" layoutY="263.0" prefHeight="108.0" prefWidth="300.0">
+         <children>
+            <Label prefHeight="0.0" prefWidth="334.0" text="Dane:" />
+            <Text fx:id="OrdersDetails_info_name" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="OrdersDetails_info_email" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="OrdersDetails_info_username" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text fx:id="OrdersDetails_info_phone" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <Label layoutX="374.0" layoutY="214.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Produkty">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ListView fx:id="OrdersDetails_list_products" layoutX="374.0" layoutY="262.0" prefHeight="437.0" prefWidth="353.0" />
+      <Label layoutX="807.0" layoutY="214.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Zamówienie">
+         <font>
+            <Font />
+         </font>
+      </Label>
+      <VBox layoutX="807.0" layoutY="299.0" prefHeight="25.0" prefWidth="300.0">
+         <children>
+            <Label prefHeight="0.0" prefWidth="334.0" text="Data Zamówienia:" />
+            <Text fx:id="OrdersDetails_info_date" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="807.0" layoutY="351.0" prefHeight="42.0" prefWidth="300.0">
+         <children>
+            <Label prefHeight="0.0" prefWidth="334.0" text="Kwota:" />
+            <Text fx:id="OrdersDetails_info_price"  style="-fx-font-weight: bold;" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="807.0" layoutY="403.0" prefHeight="42.0" prefWidth="300.0">
+         <children>
+            <Label prefHeight="0.0" prefWidth="334.0" text="Forma Płatności:" />
+            <Text fx:id="OrdersDetails_info_payment" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <CheckBox fx:id="OrdersDetails_checkbox" layoutX="807.0" layoutY="263.0" mnemonicParsing="false" text="Zrealizowano" />
+      <ChoiceBox fx:id="OrdersAdd_select_progress" layoutX="807.0" layoutY="471.0" prefHeight="25.0" prefWidth="300.0" styleClass="Entity_select" value="" />
+   </children>
+</AnchorPane>

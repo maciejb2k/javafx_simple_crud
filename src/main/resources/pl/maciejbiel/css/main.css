@@ -1,0 +1,185 @@
+.root {
+    -fx-font-family: 'Montserrat', sans-serif;
+    -fx-font-weight: 400;
+}
+
+.Root_button {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #0680b1;
+    -fx-background-color: #e1eef3;
+    -fx-border-radius: 0;
+}
+
+.Root_inputText {
+    -fx-border-radius: 0;
+}
+
+.Root_button:hover {
+    -fx-background-color: #d8ecf1;
+    -fx-cursor: hand;
+}
+
+.pagination .pagination-control .button, .pagination .toggle-button {
+    -fx-text-fill: #0680b1;
+    -fx-background-color: #e1eef3;
+    -fx-border-color: #c3e3f1;
+    -fx-pref-width: 15;
+    -fx-pref-height: 15;
+    -fx-font-weight: bold;
+}
+
+.Entity_select {
+    -fx-padding: 8px;
+    -fx-text-fill: #0680b1;
+    -fx-background-color: #e1eef3;
+    -fx-font-weight: bold;
+}
+
+#Home_button_users,
+#Home_button_products,
+#Home_button_orders {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #0680b1;
+    -fx-background-color: #e1eef3;
+}
+
+#Home_button_users:hover,
+#Home_button_products:hover,
+#Home_button_orders:hover {
+    -fx-background-color: #d8ecf1;
+    -fx-cursor: hand;
+}
+
+#Home_button_logout {
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1c1c1c;
+    -fx-background-color: #ebebeb;
+}
+
+#Home_button_logout:hover {
+    -fx-background-color: #dbdbdb;
+    -fx-cursor: hand;
+}
+
+#OrdersAdd_button_addProduct {
+
+}
+
+.Entity_button_back {
+    -fx-background-color: #079cd9;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+.Entity_button_back:hover {
+    -fx-background-color: #078fc6;
+    -fx-cursor: hand;
+}
+
+.Entity_button_addNew {
+    -fx-background-color: #d9f2d1;
+    -fx-text-fill: #38830a;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.Entity_button_addNew:hover {
+    -fx-background-color: #c3e2b9;
+    -fx-cursor: hand;
+}
+
+.Entity_button_clearSearch {
+    -fx-background-color: #f3e1e2;
+    -fx-text-fill: #bc0404;
+    -fx-font-weight: bold;
+}
+
+.Entity_button_clearSearch:hover {
+    -fx-background-color: #e7cecf;
+    -fx-cursor: hand;
+}
+
+.Entity_table_column_editButton {
+    -fx-background-color: #e1edf3;
+    -fx-text-fill: #347ab0;
+    -fx-font-size: 12px;
+}
+
+.Entity_table_column_editButton:hover {
+    -fx-background-color: #c8dee5;
+    -fx-cursor: hand;
+}
+
+.Entity_table_column_deleteButton {
+    -fx-background-color: #f3e1e2;
+    -fx-text-fill: #bc0404;
+    -fx-font-size: 12px;
+}
+
+.Entity_table_column_deleteButton:hover {
+    -fx-background-color: #e7cecf;
+    -fx-cursor: hand;
+}
+
+.EntityAdd_button_add {
+    -fx-background-color: #0589bf;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.EntityAdd_button_add:hover {
+    -fx-background-color: #047cae;
+    -fx-cursor: hand;
+}
+
+#OrdersAdd_button_addProduct,
+#OrdersAdd_button_cartDelete,
+#OrdersAdd_button_search,
+#OrdersAdd_button_addProduct,
+#OrdersAdd_button_searchUser{
+    -fx-text-fill: #0680b1;
+    -fx-background-color: #e1eef3;
+    -fx-font-weight: bold;
+}
+
+#OrdersAdd_button_submit:hover,
+#OrdersAdd_button_cartDelete:hover,
+#OrdersAdd_button_search:hover,
+#OrdersAdd_button_addProduct:hover,
+#OrdersAdd_button_searchUser:hover{
+    -fx-background-color: #bbd5de;
+    -fx-cursor: hand;
+}
+
+#OrdersAdd_button_submit {
+    -fx-background-color: #d9f2d1;
+    -fx-text-fill: #38830a;
+}
+
+#OrdersAdd_button_submit:hover {
+    -fx-background-color: #c6e3ba;
+    -fx-cursor: hand;
+}
+
+#OrdersAdd_select_payment,
+#OrdersAdd_select_search{
+    -fx-text-fill: #0680b1;
+    -fx-background-color: #e1eef3;
+    -fx-font-weight: bold;
+}
+
+#OrdersAdd_button_submit {
+    -fx-background-color: #38830a;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+#OrdersAdd_button_submit:hover {
+    -fx-background-color: #2e6d06;
+    -fx-cursor: hand;
+}

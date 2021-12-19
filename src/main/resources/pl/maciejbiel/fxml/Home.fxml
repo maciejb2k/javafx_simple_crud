@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<!--<?import org.kordamp.ikonli.javafx.FontIcon?>-->
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.Home">
+   <children>
+      <Pane prefHeight="800.0" prefWidth="330.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="287.0" layoutX="43.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/fxlogo.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutY="145.0" prefWidth="330" style="-fx-text-fill: #7e7e7e; -fx-font-size: 13px;" text="Projekt zaliczeniowy na laboratoria z Programowania Obiektowego - Maciej Biel (nr albumu 117780)" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding><Insets bottom="25" left="25" right="25" /></padding>
+            </Label>
+            <VBox layoutY="215.0" prefHeight="175.0" prefWidth="330.0">
+               <padding><Insets bottom="25" left="25" right="25" top="25" /></padding>
+               <children>
+                  <Label style="-fx-text-fill: #7e7e7e; -fx-font-size: 13px;" text="Nawigacja">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <VBox prefHeight="800.0" prefWidth="330.0">
+                     <children>
+                        <Button fx:id="Home_button_orders" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Zamówienia">
+                           <graphic>
+<!--                              <FontIcon iconLiteral="mdi-cart" iconSize="15" fill="#62b9dc"/>-->
+                           </graphic>
+                           <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="Home_button_products" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Produkty">
+                           <graphic>
+<!--                              <FontIcon iconLiteral="mdi-apps" iconSize="15" fill="#62b9dc"/>-->
+                           </graphic>
+                           <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="Home_button_users" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Użytkownicy">
+                           <graphic>
+<!--                              <FontIcon iconLiteral="mdi-account" iconSize="15" fill="#62b9dc"/>-->
+                           </graphic>
+                           <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox layoutY="450.0" prefHeight="175.0" prefWidth="330.0">
+               <padding><Insets bottom="25" left="25" right="25" top="25" /></padding>
+               <children>
+                  <Label style="-fx-text-fill: #7e7e7e; -fx-font-size: 13px;" text="Zarządzanie">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <VBox prefHeight="800.0" prefWidth="330.0">
+                     <children>
+                        <Button fx:id="Home_button_logout" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Zamknij">
+                           <graphic>
+<!--                              <FontIcon iconLiteral="mdi-power" iconSize="15" fill="#3c3c3c"/>-->
+                           </graphic>
+                           <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <ImageView fitHeight="64.0" fitWidth="64.0" layoutX="385.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/user.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="472.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Witaj w Panelu Administratora">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#09a9e3" layoutX="472.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maciej Biel">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="385.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podsumowanie">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="385.0" layoutY="240.0" prefHeight="153.0" prefWidth="729.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="117.0" prefWidth="243.0" style="-fx-background-color: #099ee4;">
+               <children>
+                  <Text fx:id="Home_text_usersCount" fill="WHITE" layoutX="38.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="38.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Uzytkownikow">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="10.0" prefHeight="117.0" prefWidth="243.0" style="-fx-background-color: #0997D9;" GridPane.columnIndex="1">
+               <children>
+                  <Text fx:id="Home_text_productsCount" fill="WHITE" layoutX="38.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="38.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produktów">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane layoutX="253.0" layoutY="10.0" prefHeight="117.0" prefWidth="243.0" style="-fx-background-color: #0673a5;" GridPane.columnIndex="2">
+               <children>
+                  <Text fx:id="Home_text_ordersCount" fill="WHITE" layoutX="38.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="38.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Zamówień">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Text layoutX="385.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ostatnie Zamówienia">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="Home_table_orders" layoutX="385.0" layoutY="485.0" prefHeight="216.0" prefWidth="729.0">
+         <columns>
+            <TableColumn fx:id="Home_col_id" prefWidth="71.0" style="-fx-alignment: CENTER;" text="ID" />
+            <TableColumn fx:id="Home_col_date" prefWidth="206.0" style="-fx-alignment: CENTER;" text="Data Zamówienia" />
+            <TableColumn fx:id="Home_col_email" prefWidth="310.0" style="-fx-alignment: CENTER;" text="E-Mail" />
+            <TableColumn fx:id="Home_col_done" prefWidth="141.0" style="-fx-alignment: CENTER;" text="Zrealizowano" />
+         </columns></TableView>
+   </children>
+</AnchorPane>
