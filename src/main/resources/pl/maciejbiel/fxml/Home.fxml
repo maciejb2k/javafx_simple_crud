@@ -16,7 +16,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<!--<?import org.kordamp.ikonli.javafx.FontIcon?>-->
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.maciejbiel.controllers.Home">
    <children>
@@ -48,7 +48,7 @@
                      <children>
                         <Button fx:id="Home_button_orders" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Zamówienia">
                            <graphic>
-<!--                              <FontIcon iconLiteral="mdi-cart" iconSize="15" fill="#62b9dc"/>-->
+                              <FontIcon iconLiteral="mdi-cart" iconSize="15" fill="#62b9dc"/>
                            </graphic>
                            <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
                            <VBox.margin>
@@ -57,7 +57,7 @@
                         </Button>
                         <Button fx:id="Home_button_products" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Produkty">
                            <graphic>
-<!--                              <FontIcon iconLiteral="mdi-apps" iconSize="15" fill="#62b9dc"/>-->
+                              <FontIcon iconLiteral="mdi-apps" iconSize="15" fill="#62b9dc"/>
                            </graphic>
                            <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
                            <VBox.margin>
@@ -66,7 +66,7 @@
                         </Button>
                         <Button fx:id="Home_button_users" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Użytkownicy">
                            <graphic>
-<!--                              <FontIcon iconLiteral="mdi-account" iconSize="15" fill="#62b9dc"/>-->
+                              <FontIcon iconLiteral="mdi-account" iconSize="15" fill="#62b9dc"/>
                            </graphic>
                            <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
                            <VBox.margin>
@@ -92,7 +92,7 @@
                      <children>
                         <Button fx:id="Home_button_logout" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="50.0" prefWidth="330.0" text="Zamknij">
                            <graphic>
-<!--                              <FontIcon iconLiteral="mdi-power" iconSize="15" fill="#3c3c3c"/>-->
+                              <FontIcon iconLiteral="mdi-power" iconSize="15" fill="#3c3c3c"/>
                            </graphic>
                            <padding><Insets bottom="15" left="15" right="15" top="15" /></padding>
                            <VBox.margin>

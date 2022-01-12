@@ -97,6 +97,27 @@ public class ProductsAdd implements Initializable {
             return;
         }
 
+
+        if(name.length() > 128) {
+            setMessageText("error", "Nazwa produktu jest za długa");
+            return;
+        }
+
+        if(code.length() > 32) {
+            setMessageText("error", "Kod produktu jest za długi");
+            return;
+        }
+
+        if(desc.length() > 255) {
+            setMessageText("error", "Opis jest za długi");
+            return;
+        }
+
+        if(category.length() > 255) {
+            setMessageText("error", "Kategoria jest za długa");
+            return;
+        }
+
         double parsedPrice;
 
         try {
@@ -106,8 +127,10 @@ public class ProductsAdd implements Initializable {
             return;
         }
 
+        desc = desc.replaceAll("[\\t\\n\\r]+"," ");
+
         if (actionType.equals("ADD")) {
-            Produkty product = new Produkty(name, code, parsedPrice, category, desc);
+            Produkty product = new Produkty(name, code, parsedPrice, desc, category);
             addProduct(product);
             setMessageText("success", "Poprawnie dodano produkt. Dodaj kolejne");
         } else if (actionType.equals("UPDATE")) {

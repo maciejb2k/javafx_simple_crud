@@ -25,6 +25,7 @@ import java.sql.Timestamp;
 import java.util.List;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class UsersAdd implements Initializable{
     private final UzytkownicyService usersService = new UzytkownicyService();
@@ -158,6 +159,52 @@ public class UsersAdd implements Initializable{
             return;
         }
 
+
+        if(fname.length() > 64) {
+            setMessageText("error", "Imie jest za dlugie");
+            return;
+        }
+
+        if(lname.length() > 64) {
+            setMessageText("error", "Nazwisko jest za dlugie");
+            return;
+        }
+
+        if(username.length() > 32) {
+            setMessageText("error", "Nazwa uzytkownika jest za dluga");
+            return;
+        }
+
+        if(email.length() > 64) {
+            setMessageText("error", "E-Mail jest za dlugi");
+            return;
+        }
+
+        if(password.length() > 255) {
+            setMessageText("error", "Haslo jest za dlugie");
+            return;
+        }
+
+        if(street.length() > 64) {
+            setMessageText("error", "Nazwa ulicy jest za dluga");
+            return;
+        }
+
+        if(flatnum.length() > 32) {
+            setMessageText("error", "Numer mieszkania jest za długi");
+            return;
+        }
+
+        if(city.length() > 64) {
+            setMessageText("error", "Nazwa miasta jest za dluga");
+            return;
+        }
+
+        if(country.length() > 64) {
+            setMessageText("error", "Nazwa kraju jest za dluga");
+            return;
+        }
+
         if(zipcode.length() != 6) {
             setMessageText("error", "Podaj poprawny kod pocztowy");
             return;
@@ -170,6 +217,24 @@ public class UsersAdd implements Initializable{
 
         if(password.length() < 8) {
             setMessageText("error", "Podaj poprawne hasło");
+            return;
+        }
+
+        Pattern VALID_EMAIL_ADDRESS_REGEX =
+                Pattern.compile("^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}$", Pattern.CASE_INSENSITIVE);
+
+        if(!VALID_EMAIL_ADDRESS_REGEX.matcher(email).find()) {
+            setMessageText("error", "Podaj poprawny email");
+            return;
+        }
+
+        if(!phone.matches("[0-9]+")) {
+            setMessageText("error", "Podaj poprawny telefon");
+            return;
+        }
+
+        if(!zipcode.matches("[0-9]{2}-[0-9]{3}")) {
+            setMessageText("error", "Podaj poprawny kod pocztowy");
             return;
         }
 
